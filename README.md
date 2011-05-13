@@ -1,13 +1,13 @@
 # Named Parameter `v0.0.1`
 
 ## Description
-That you ever dream with named parameter in Ruby? Well, you doesn't have to pray to
-Ruby's 2.0 have this, just install this gem and have fun!
+Have you ever dreamed about named parameter with Ruby? Well, you don't have to wait for 
+Ruby 2.0, just install this gem and have fun!
 
 ## How it works
-Just extend the module NamedParameter in your class/module and use the method 'named'
-before define your method, when you call it, use a hash that's key is the parameter
-name. See this example:
+All you need is to extend the module NamedParameter in your class/module and apply the method 'named'
+before you define your method. When you call your method, pass a hash as argument. The hash keys 
+represents the named parameters. Checkout this example:
 
     class People
       extend NamedParameter
@@ -43,13 +43,13 @@ Multiple arguments? Of course!
     
     Point.new.move_to(y: 30,x: 50)
 
-## Use in production?
-**You (maybe)**:"Oh! Magic! I'll use in my production projects!"
-**Me**: Wait! Before use this in production, you have to know that gem
-use the [method_added callback](http://ruby-doc.org/core/classes/Module.html#M000460), so if you want to use named parameter
-and this callback in the same class, you have to use [around alias spell](https://gist.github.com/534772#file_around_alias.rb).
+## Production ready?
+**You (maybe)**:"Oh! Magic! I'll use in my projects!"
+**Me**: Wait! Before you use it in production, you have to know that gem
+uses the [method_added callback](http://ruby-doc.org/core/classes/Module.html#M000460). So if you want to apply named parameter
+and this callback in the same class, you have to use this [around alias spell](https://gist.github.com/534772#file_around_alias.rb).
 
-## How Install
-Install the gem:
+## How to Install
+Just install the gem:
 
     gem install named_parameter
